@@ -12,13 +12,21 @@
     --fuchsia-200: rgb(246, 207, 255);
     --fuchsia-500: rgb(217,70,239);
     --purple-500:rgb(168,85,247);
+    --overlay-black: rgba(0,0,0,0.8);
 }
 *{
     font-family: "Segoe UI", Arial;
 }
 /* Keadaan Khusus */
-body.no-scroll{
+body.no-scroll, body:has(.detail-project:target){
     overflow: hidden;
+}
+body{
+    display: flex;
+    background-color: var(--background-base);
+}
+html{
+    scroll-behavior: smooth;
 }
 .posisi-relatif{
     position: relative;
@@ -30,14 +38,20 @@ a{
     text-decoration: none;
     color: inherit;
 }
+.tombol-utama{
+    background-color: var(--indigo-500);
+    color: var(--color-text-base);
+    border-radius: 4px;
+    transition: all 150ms;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 8px 16px;
+    border: none;
+}
+.tombol-utama:hover{
+    background-color: var(--indigo-600);
+}
 /* End Keadaan Khusus */
-body{
-    display: flex;
-    background-color: var(--background-base);
-}
-html{
-    scroll-behavior: smooth;
-}
 /* hamburger */
 .hamburger{
     position: fixed;
@@ -309,18 +323,68 @@ section.about{
     justify-content: center;
     align-items: center;
 }
-.item>.overlay>.detail>button{
-    background-color: var(--indigo-500);
-    color: var(--color-text-base);
-    border-radius: 4px;
-    transition: all 150ms;
-    font-weight: bold;
-    cursor: pointer;
-    padding: 8px 16px;
-    border: none;
+.detail-project{
+    display: none;
 }
-.item>.overlay>.detail>button:hover{
-    background-color: var(--indigo-600);
+.detail-project:target{
+    position: fixed;
+    inset: 0;
+    background-color: var(--overlay-black);
+    z-index: 30;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-detail-project{
+    background-color: var(--gray-800);
+    border-radius: 8px;
+    padding: 24px;
+    width: 100%;
+    height: fit-content;
+    max-width: 42rem;
+}
+.footer-detail-project{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header-detail-project{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+.header-detail-project>h3{
+    color: var(--color-text-base);
+    font-weight: bold;
+    font-size: 1.25rem;
+    line-height: 1.4;
+}
+.deskripsi-project{
+    max-height: 9rem;
+    min-height: fit-content;
+    width: 100%;
+    background-color: var(--gray-700);
+    text-align: justify;
+    overflow: auto;
+    padding: 0 8px;
+    margin: 6px 0;
+    border-radius: 4px;
+}
+.main-detail-project {
+    margin: 12px 0;
+    line-height: 1.75;
+}
+.spesifikasi-project>span{
+    display: inline-block;
+    background-color: var(--gray-700);
+    padding: 4px 8px;
+    border-radius: 9999px;
+    margin: 2px 0;
+}
+.main-detail-project{
+    color: var(--gray-200);
 }
 /* end */
 
