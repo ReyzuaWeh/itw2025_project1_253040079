@@ -393,7 +393,7 @@ span.specification-badge{
 /* section list achievement */
 section#list-achievement{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     overflow: hidden;
     margin: auto;
     padding: 20px;

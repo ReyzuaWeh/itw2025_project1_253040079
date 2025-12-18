@@ -15,4 +15,8 @@
         grid-template-columns: repeat(2, 1fr);
     }
     /* end */
+    /* section achievements */
+    section#list-achievement{
+        grid-template-columns: 1fr 1fr;
+    }
 }

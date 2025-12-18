@@ -32,4 +32,9 @@
         grid-template-columns: repeat(5, 1fr);
     }
     /* end */    
+    /* section achievements */
+    section#list-achievement{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    /* end */
 }
