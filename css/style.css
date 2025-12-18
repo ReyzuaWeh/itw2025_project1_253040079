@@ -154,7 +154,16 @@ nav li a.active::before{
 .sosmed{
     margin-top: auto;
     display: flex;
+    justify-content: end;
     gap: 16px;
+}
+.logo-anchor{
+    color: var(--gray-400);
+    font-size: 1.25rem;
+    transition: all 150ms ease;
+}
+.logo-anchor:hover{
+    color: var(--indigo-500);
 }
 .logo{
     font-size: 0;
@@ -258,11 +267,11 @@ section.about{
     background-color: var(--gray-800); 
     padding: 1.5rem;
 }
-.grid-list-project>.item>.thumbnail{
-    width: 100%;
-    background: transparent;
+.thumbnail{
     aspect-ratio: 16/9;
-    margin-bottom: 1rem;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 8px;
 }
 .thumbnail>img{
     width: 100%;
@@ -302,7 +311,7 @@ section.about{
     flex-wrap: wrap;
     justify-content: center;
 }
-.item>.overlay>.spesifikasi>span{
+span.specification-badge{
     display: inline-block;
     background-color: var(--gray-700);
     color: var(--gray-200);
@@ -310,8 +319,8 @@ section.about{
     line-height: 1rem;
     padding: 4px 8px;
     border-radius: 9999px;
-    margin-right: 8px;
-    margin-bottom: 8px;
+    margin-inline-start: 5px;
+    margin-block-end: 8px;
 }
 .grid-list-project>.item>.overlay:hover{
     opacity: 1;
@@ -379,13 +388,6 @@ section.about{
     line-height: 1.75;
     color: var(--gray-200);
 }
-.spesifikasi-project>span{
-    display: inline-block;
-    background-color: var(--gray-700);
-    padding: 4px 8px;
-    border-radius: 9999px;
-    margin: 2px 0;
-}
 /* end */
 
 /* section list achievement */
@@ -395,10 +397,10 @@ section#list-achievement{
     overflow: hidden;
     margin: auto;
     padding: 20px;
+    gap: 4px;
 }
 section#list-achievement>.item{
     min-height: 120px;
-    width: 100%;
     background-color: var(--gray-800);
     border-radius: 8px;
     padding: 8px;
@@ -412,6 +414,8 @@ section#list-achievement>.item .overlay{
     background-color: var(--overlay-black);
     transition: all 150ms;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 section#list-achievement>.item:hover .overlay{
     opacity: 1;
