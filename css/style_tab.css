@@ -1,36 +1,36 @@
 @media screen and (min-width: 768px) {
-    /* Section Hero danJudul */
-    h1.keterangan{
-        font-size: 3.75rem; 
-        line-height: 1; 
-    }
-    /* End */
+  /* Section Hero danJudul */
+  h1.keterangan {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+  /* End */
 
-    /* Section About */
-    section.about>.layer>h1.myrole{
-        font-size: 3rem; 
-        line-height: 1; 
-    }
-    section.about>.layer{
-        padding-left: 2.5rem; 
-        padding-right: 2.5rem;
-    }
-    section.about>.layer>p{
-        font-size: 1.25rem; 
-        line-height: 1.75rem; 
-    }
-    /* end */
+  /* Section About */
+  section.about > .layer > h1.myrole {
+    font-size: 3rem;
+    line-height: 1;
+  }
+  section.about > .layer {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+  section.about > .layer > p {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+  /* end */
 
-    /* Section List Project */
-    .grid-list-project{
-        grid-template-columns: 1fr 1fr;
-        padding-left: 2.5rem;
-        padding-right: 2.5rem;
-    }
-    /* end */
-    /* Section List Skil */
-    section#list-skill{
-        grid-template-columns: repeat(4, 1fr);
-    }
-    /* end */
+  /* Section List Project */
+  .grid-list-project {
+    grid-template-columns: 1fr 1fr;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+  /* end */
+  /* Section List Skil */
+  section#list-skill {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  /* end */
 }
